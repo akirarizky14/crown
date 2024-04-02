@@ -2,7 +2,9 @@ import React from 'react'
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      Crown Car Rental
+    </div>
   )
 }
 
