@@ -1,10 +1,17 @@
 import React from 'react'
-
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Home from './views/Home/Home'
+import Navbar from './components/Navbar/Navbar'
 function App() {
   return (
-    <div>
-      Crown Car Rental
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
