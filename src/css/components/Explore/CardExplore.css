@@ -1,0 +1,95 @@
+.container-cardExplore{
+    width: 30%;
+    height: 48%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper-cardExplore{
+    width: 85%;
+    height: 85%;
+    background-color: azure;
+}
+.top-cardExplore{
+    width: 100%;
+    height: 50%;
+}
+.image-top-cardExplore{
+    width: 100%;
+    height: 100%;
+}
+.image-top-cardExplore img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.bottom-cardExplore{
+    width: 100%;
+    height: 50%;
+}
+.desc-bottom-cardExplore{
+    width: 100%;
+    height: 100%;
+}
+.title-bottom-cardExplore{
+    width: 100%;
+    height: 35%;
+}
+.title-bottom-cardExplore h1{
+    font-size: 24px;
+    font-weight: 800;
+}
+.spec-bottom-cardExplore{
+    width: 100%;
+    height: 35%;
+    border: 0.5px solid #000000;
+    border-radius: 10px;
+}
+.wrapper-spec-bottom-cardExplore {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3px; /* Jarak antara img/span dengan elemen berikutnya */
+    overflow-y: auto;
+    padding-left: 4%;
+    padding-top: 2%;
+    align-content: flex-start;
+}
+
+.wrapper-spec-bottom-cardExplore > img,
+.wrapper-spec-bottom-cardExplore > span {
+    margin-right: 10px; /* Jarak antara img dan span */
+}
+
+.wrapper-spec-bottom-cardExplore > img:last-child,
+.wrapper-spec-bottom-cardExplore > span:last-child {
+    margin-right: 0; /* Menghapus margin pada elemen terakhir agar tidak ada ruang kosong di sisi kanan */
+}
+
+.wrapper-spec-bottom-cardExplore span{
+    font-size: 16px;
+}
+
+.spec-bottom-cardExplore img{
+    object-fit: cover;
+}
+.button-bottom-cardExplore{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-bottom-cardExplore Button{
+    background-color: #FFB700;
+    width: 100%;
+}
+.button-bottom-cardExplore Button:hover{
+    background-color: #f8c74e;
+}
