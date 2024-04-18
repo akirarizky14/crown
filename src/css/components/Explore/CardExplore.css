@@ -1,6 +1,6 @@
 .container-cardExplore{
-    width: 30%;
-    height: 48%;
+    width: 344px;
+    height: 416px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     display: flex;
@@ -42,6 +42,10 @@
     font-size: 24px;
     font-weight: 800;
 }
+.title-bottom-cardExplore span{
+    font-size: 16px;
+    font-weight: 500;
+}
 .spec-bottom-cardExplore{
     width: 100%;
     height: 35%;
@@ -55,25 +59,28 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    gap: 3px; /* Jarak antara img/span dengan elemen berikutnya */
+    align-items: center;
     overflow-y: auto;
-    padding-left: 4%;
+    padding-left: 3%;
+    padding-right: 2%;
     padding-top: 2%;
     align-content: flex-start;
 }
 
-.wrapper-spec-bottom-cardExplore > img,
+.wrapper-spec-bottom-cardExplore > img{
+    margin-right: 4px;
+}
 .wrapper-spec-bottom-cardExplore > span {
-    margin-right: 10px; /* Jarak antara img dan span */
+    margin-right: 8px; 
 }
 
 .wrapper-spec-bottom-cardExplore > img:last-child,
 .wrapper-spec-bottom-cardExplore > span:last-child {
-    margin-right: 0; /* Menghapus margin pada elemen terakhir agar tidak ada ruang kosong di sisi kanan */
+    margin-right: 0;
 }
 
 .wrapper-spec-bottom-cardExplore span{
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .spec-bottom-cardExplore img{
@@ -92,4 +99,109 @@
 }
 .button-bottom-cardExplore Button:hover{
     background-color: #f8c74e;
+}
+@media screen and (max-width:1024px){
+    .container-cardExplore{
+        width: 344px;
+        height: 416px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper-cardExplore{
+        width: 85%;
+        height: 85%;
+        background-color: azure;
+    }
+    .top-cardExplore{
+        width: 100%;
+        height: 50%;
+    }
+    .image-top-cardExplore{
+        width: 100%;
+        height: 100%;
+    }
+    .image-top-cardExplore img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .bottom-cardExplore{
+        width: 100%;
+        height: 50%;
+    }
+    .desc-bottom-cardExplore{
+        width: 100%;
+        height: 100%;
+    }
+    .title-bottom-cardExplore{
+        width: 100%;
+        height: 35%;
+    }
+    .title-bottom-cardExplore h1{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .title-bottom-cardExplore span{
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .spec-bottom-cardExplore{
+        width: 100%;
+        height: 35%;
+        border: 0.5px solid #000000;
+        border-radius: 10px;
+    }
+    .wrapper-spec-bottom-cardExplore {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-items: center;
+        overflow-y: auto;
+        padding-left: 5%;
+        padding-right: 2%;
+        padding-top: 4%;
+        align-content: flex-start;
+    }
+    
+    .wrapper-spec-bottom-cardExplore > img{
+        margin-right: 5px;
+    }
+    .wrapper-spec-bottom-cardExplore > span {
+        margin-right: 8px; 
+    }
+    
+    .wrapper-spec-bottom-cardExplore > img:last-child,
+    .wrapper-spec-bottom-cardExplore > span:last-child {
+        margin-right: 0;
+    }
+    
+    .wrapper-spec-bottom-cardExplore span{
+        font-size: 12px;
+    }
+    
+    .spec-bottom-cardExplore img{
+        object-fit: cover;
+    }
+    .button-bottom-cardExplore{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-bottom-cardExplore Button{
+        background-color: #FFB700;
+        width: 100%;
+    }
+    .button-bottom-cardExplore Button:hover{
+        background-color: #f8c74e;
+    }
+
 }

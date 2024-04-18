@@ -1,17 +1,19 @@
 import React from 'react'
 import '../../css/components/Explore/CardExplore.css'
 import { Button } from '@mui/material'
-import Car from '../../assets/car-template.png'
 import Star from '../../assets/Star.png'
 import Transmision from '../../assets/Vector.png'
 import Spedo from '../../assets/spedo.png'
-function CardExplore() {
+import Petrol from '../../assets/petrol.png'
+import Calendar from '../../assets/calendar.png'
+import Location from '../../assets/location.png'
+function CardExplore(props) {
   return (
     <div className="container-cardExplore">
         <div className="wrapper-cardExplore">
             <div className="top-cardExplore">
                 <div className="image-top-cardExplore">
-                    <img src={Car} alt="Logo" />
+                    <img src={props.CarPict} alt="Logo" />
                 </div>
             </div>
             <div className="bottom-cardExplore">
@@ -27,15 +29,15 @@ function CardExplore() {
                     </div>
                     <div className="spec-bottom-cardExplore">
                         <div className="wrapper-spec-bottom-cardExplore">
-                            <img src={Transmision} alt="" />
+                            <img src={Transmision} alt="Transmisi" />
                             <span>Auto</span>
-                            <img src={Spedo} alt="" />
+                            <img src={Spedo} alt="Spedometer" />
                             <span>10.000 KM</span>
-                            <img src={Transmision} alt="" />
+                            <img src={Petrol} alt="Petrol" />
                             <span>Petrol</span>
-                            <img src={Transmision} alt="" />
+                            <img src={Calendar} alt="Calendar" />
                             <span>2022</span>
-                            <img src={Transmision} alt="" />
+                            <img src={Location} alt="Location" />
                             <span>Jakarta Barat</span>
                         </div>
                     </div>
