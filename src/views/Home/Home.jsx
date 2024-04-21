@@ -14,4 +14,5 @@ function Home() {
         <Footer/>
     </>
   )
+}
 export default Home;
