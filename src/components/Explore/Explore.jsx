@@ -17,12 +17,54 @@ function Explore() {
                 <span>Drive in Style with Our Premium Rental Fleet!</span>
             </div>
             <div className="content-explore">
-                <CardExplore CarPict={innova}/>
-                <CardExplore CarPict={vellfire}/>
-                <CardExplore CarPict={bmw}/>
-                <CardExplore CarPict={avanza}/>
-                <CardExplore CarPict={binguo}/>
-                <CardExplore CarPict={dolphin}/>
+                <CardExplore 
+                  CarPict={innova}
+                  Transmision="MT"
+                  Spedo="10.000"
+                  Petrol="Gasoline"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  CarPict={vellfire}
+                  Transmision="MT"
+                  Spedo="10.000"
+                  Petrol="Gasoline"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  CarPict={bmw}
+                  Transmision="MT"
+                  Spedo="10.000"
+                  Petrol="Gasoline"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  CarPict={avanza}
+                  Transmision="MT"
+                  Spedo="10.000"
+                  Petrol="Gasoline"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  CarPict={binguo}
+                  Transmision="AT"
+                  Spedo="10.000"
+                  Petrol="Electric"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  CarPict={dolphin}
+                  Transmision="AT"
+                  Spedo="10.000"
+                  Petrol="Electric"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
             </div>
         </div>
     </div>

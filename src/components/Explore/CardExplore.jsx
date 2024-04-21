@@ -30,15 +30,15 @@ function CardExplore(props) {
                     <div className="spec-bottom-cardExplore">
                         <div className="wrapper-spec-bottom-cardExplore">
                             <img src={Transmision} alt="Transmisi" />
-                            <span>Auto</span>
+                            <span>{props.Transmision}</span>
                             <img src={Spedo} alt="Spedometer" />
-                            <span>10.000 KM</span>
+                            <span>{props.Spedo} KM</span>
                             <img src={Petrol} alt="Petrol" />
-                            <span>Petrol</span>
+                            <span>{props.Petrol}</span>
                             <img src={Calendar} alt="Calendar" />
-                            <span>2022</span>
+                            <span>{props.Calendar}</span>
                             <img src={Location} alt="Location" />
-                            <span>Jakarta Barat</span>
+                            <span>{props.Location}</span>
                         </div>
                     </div>
                     <div className="button-bottom-cardExplore">
