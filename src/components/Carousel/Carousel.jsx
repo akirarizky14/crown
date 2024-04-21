@@ -10,12 +10,9 @@ function Carousel() {
         <img src={background} alt="Background" />
         <div className="wrapper-carousel">
             <div className="left-carousel">
-                <div className="desc-left-carousel">
-                    <h1>Find Your Best</h1>
-                    <h1 style={{color:"#FFB700"}}>Dream Car for Rental</h1>
-                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span>
-                </div>
-              <Button variant="outlined">View Cars</Button>
+                <h1>Find Your Best <h1 style={{color:"#FFB700"}}>Dream Car for Rental</h1></h1>
+                <span>Experience luxury on wheels! Rent a premium car for your next journey. Book now and elevate your travel experience!</span>
+                <Button variant="outlined">View Cars</Button>
             </div>
             <div className="right-carousel">
                 <div className="wrapper-car">

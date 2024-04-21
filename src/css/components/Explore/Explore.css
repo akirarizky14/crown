@@ -1,0 +1,132 @@
+.container-explore{
+    width: 100%;
+    height: 1180px;
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+}
+.wrapper-explore{
+    width: 80%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.title-explore{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title-explore h1{
+    font-size: 48px;
+    font-weight: 800;
+}
+.title-explore span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.content-explore{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: space-around;
+}
+.content-explore::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width:1024px){
+    .container-explore{
+        width: 100%;
+        height: 980px;
+        background-color: #F4F4F4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper-explore{
+        width: 80%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .title-explore{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-explore h1{
+        font-size: 38px;
+        font-weight: 700;
+    }
+    .title-explore span{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .content-explore{
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        justify-content: space-around;
+    }
+    .content-explore::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container-explore{
+        width: 100%;
+        height: 780px;
+        background-color: #F4F4F4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper-explore{
+        width: 80%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .title-explore{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-explore h1{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .title-explore span{
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .content-explore{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        justify-content: space-around;
+    }
+    .content-explore::-webkit-scrollbar{
+        display: none;
+    }
+}

@@ -1,15 +1,15 @@
-import React from 'react';
-import Countdown from './Countdown';
-import '../../css/views/Home/Home.css';
-import logo from '../../assets/logo_crown_car.png';
+
+import React from 'react'
+import Carousel from '../../components/Carousel/Carousel'
+import Explore from '../../components/Explore/Explore'
+import Footer from '../../components/Footer/Footer'
+
 function Home() {
   return (
-    <div className="home-container">
-      <img src={logo} alt="Logo Crown Car" />
-      <p className="home-text">Saat ini Website Crown Car sedang dalam perbaikan</p>
-      <Countdown />
-    </div>
-  );
-}
-
+    <>
+        <Carousel/>
+        <Explore/>
+        <Footer/>
+    </>
+  )
 export default Home;
