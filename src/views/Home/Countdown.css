@@ -1,0 +1,37 @@
+/* Gaya untuk kontainer hitung mundur */
+.countdown-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Gaya untuk angka hitung mundur */
+  .countdown-number {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+  
+  /* Gaya untuk label hitung mundur */
+  .countdown-label {
+    font-size: 16px;
+    color: #333;
+  }
+/* Gaya untuk kontainer hitung mundur */
+.countdown-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Gaya untuk angka hitung mundur */
+  .countdown-number {
+    font-size: 44px;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+  
+  /* Gaya untuk label hitung mundur */
+  .countdown-label {
+    font-size: 36px;
+    color: #333;
+  }
+    
