@@ -19,7 +19,7 @@ function CardExplore(props) {
             <div className="bottom-cardExplore">
                 <div className="desc-bottom-cardExplore">
                     <div className="title-bottom-cardExplore">
-                        <h1>Toyota Innova Zenix</h1>
+                        <h1>{props.name}</h1>
                         <img src={Star} alt="Star" />
                         <img src={Star} alt="Star" />
                         <img src={Star} alt="Star" />

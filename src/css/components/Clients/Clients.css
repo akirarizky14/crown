@@ -1,0 +1,28 @@
+.container-clients{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper-clients{
+    width: 90%;
+    height: 90%;
+}
+.title-clients{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    background-color: brown;
+}
+.content-clients{
+    width: 100%;
+    height: 70%;
+    background-color: aquamarine;
+    text-align: center;
+}
+/* .content-clients img{
+    width: 200px;
+    height: 46px;
+    object-fit: cover;
+} */

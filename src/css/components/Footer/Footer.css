@@ -76,11 +76,11 @@
     .container-footer{
         width: 100%;
         height: 360px;
-        background-color: #212121;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: #f4f4f4;
     }
     .wrapper-footer{
         width: 90%;
@@ -89,6 +89,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-radius: 10px;
+        background-color: #212121;
     }
     .content-footer{
         width: 100%;
