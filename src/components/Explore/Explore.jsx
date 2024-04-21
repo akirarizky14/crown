@@ -18,38 +18,43 @@ function Explore() {
             </div>
             <div className="content-explore">
                 <CardExplore 
+                  name="Toyota Innova Zenix"
                   CarPict={innova}
-                  Transmision="MT"
+                  Transmision="AT"
                   Spedo="10.000"
                   Petrol="Gasoline"
                   Calendar="2024"
                   Location="Jakarta Barat"
                 />
                 <CardExplore 
+                  name="Toyota Vellfire"
                   CarPict={vellfire}
-                  Transmision="MT"
+                  Transmision="AT"
                   Spedo="10.000"
                   Petrol="Gasoline"
                   Calendar="2024"
                   Location="Jakarta Barat"
                 />
                 <CardExplore 
+                  name="BMW"
                   CarPict={bmw}
-                  Transmision="MT"
+                  Transmision="AT"
                   Spedo="10.000"
                   Petrol="Gasoline"
                   Calendar="2024"
                   Location="Jakarta Barat"
                 />
                 <CardExplore 
+                  name="Toyota Avanza G"
                   CarPict={avanza}
-                  Transmision="MT"
+                  Transmision="AT"
                   Spedo="10.000"
                   Petrol="Gasoline"
                   Calendar="2024"
                   Location="Jakarta Barat"
                 />
                 <CardExplore 
+                  name="Wuling Binguo"
                   CarPict={binguo}
                   Transmision="AT"
                   Spedo="10.000"
@@ -58,6 +63,7 @@ function Explore() {
                   Location="Jakarta Barat"
                 />
                 <CardExplore 
+                  name="Wuling Dolphin"
                   CarPict={dolphin}
                   Transmision="AT"
                   Spedo="10.000"
