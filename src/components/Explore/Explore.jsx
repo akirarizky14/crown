@@ -17,12 +17,60 @@ function Explore() {
                 <span>Drive in Style with Our Premium Rental Fleet!</span>
             </div>
             <div className="content-explore">
-                <CardExplore CarPict={innova}/>
-                <CardExplore CarPict={vellfire}/>
-                <CardExplore CarPict={bmw}/>
-                <CardExplore CarPict={avanza}/>
-                <CardExplore CarPict={binguo}/>
-                <CardExplore CarPict={dolphin}/>
+                <CardExplore 
+                  name="Toyota Innova Zenix"
+                  CarPict={innova}
+                  Transmision="AT"
+                  Spedo="10.000"
+                  Petrol="Gasoline"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  name="Toyota Vellfire"
+                  CarPict={vellfire}
+                  Transmision="AT"
+                  Spedo="10.000"
+                  Petrol="Gasoline"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  name="BMW"
+                  CarPict={bmw}
+                  Transmision="AT"
+                  Spedo="10.000"
+                  Petrol="Gasoline"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  name="Toyota Avanza G"
+                  CarPict={avanza}
+                  Transmision="AT"
+                  Spedo="10.000"
+                  Petrol="Gasoline"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  name="Wuling Binguo"
+                  CarPict={binguo}
+                  Transmision="AT"
+                  Spedo="10.000"
+                  Petrol="Electric"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
+                <CardExplore 
+                  name="Wuling Dolphin"
+                  CarPict={dolphin}
+                  Transmision="AT"
+                  Spedo="10.000"
+                  Petrol="Electric"
+                  Calendar="2024"
+                  Location="Jakarta Barat"
+                />
             </div>
         </div>
     </div>

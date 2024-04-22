@@ -1,0 +1,239 @@
+.container-clients{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+}
+.wrapper-clients{
+    width: 90%;
+    height: 90%;
+}
+.title-clients{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-clients h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+.content-clients {
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    overflow-x: auto; /* Mengizinkan scrolling horizontal jika gambar melebihi lebar container */
+    overflow-y: hidden; /* Menyembunyikan scrolling vertikal */
+    white-space: nowrap; /* Mencegah wrapping konten */
+    position: relative;
+}
+.content-clients::-webkit-scrollbar{
+    display: none;
+}
+.content-clients img {
+    margin-right: 50px;
+    animation: moveRight 10s linear infinite;
+    position: relative;
+}
+#koperasi{
+    width: 102.87px;
+    height: 46px;
+    object-fit: cover;
+}
+#infovesta{
+    height: 46.32px;
+    width: 200px;
+    object-fit: cover;
+}
+#ot{
+    width: 85.02;
+    height: 46px;
+    object-fit: cover;
+}
+#pan{
+    height: 52px;
+    width: 123.16px;
+    object-fit: cover;
+}
+#ssp{
+    width: 81.93px;
+    height: 66px;
+    object-fit: cover;
+}
+#lockheed{
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+}
+@keyframes moveRight {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .container-clients{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 320px;
+    }
+    .wrapper-clients{
+        width: 90%;
+        height: 90%;
+    }
+    .title-clients{
+        width: 100%;
+        height: 30%;
+        text-align: center;
+    }
+    .content-clients {
+        width: 100%;
+        height: 70%;
+        text-align: center;
+        overflow-x: auto; /* Mengizinkan scrolling horizontal jika gambar melebihi lebar container */
+        overflow-y: hidden; /* Menyembunyikan scrolling vertikal */
+        white-space: nowrap; /* Mencegah wrapping konten */
+        position: relative;
+    }
+    .title-clients h1{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .content-clients::-webkit-scrollbar{
+        display: none;
+    }
+    .content-clients img {
+        margin-right: 50px;
+        animation: moveRight 10s linear infinite;
+        position: relative;
+    }
+    #koperasi{
+        width: 102.87px;
+        height: 46px;
+        object-fit: cover;
+    }
+    #infovesta{
+        height: 46.32px;
+        width: 200px;
+        object-fit: cover;
+    }
+    #ot{
+        width: 85.02;
+        height: 46px;
+        object-fit: cover;
+    }
+    #pan{
+        height: 52px;
+        width: 123.16px;
+        object-fit: cover;
+    }
+    #ssp{
+        width: 81.93px;
+        height: 66px;
+        object-fit: cover;
+    }
+    #lockheed{
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+    }
+    @keyframes moveRight {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 100%;
+        }
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .container-clients{
+        width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 320px;
+    }
+    .wrapper-clients{
+        width: 90%;
+        height: 90%;
+    }
+    .title-clients{
+        width: 100%;
+        height: 30%;
+        text-align: center;
+    }
+    .content-clients {
+        width: 100%;
+        height: 70%;
+        text-align: center;
+        overflow-x: auto; /* Mengizinkan scrolling horizontal jika gambar melebihi lebar container */
+        overflow-y: hidden; /* Menyembunyikan scrolling vertikal */
+        white-space: nowrap; /* Mencegah wrapping konten */
+        position: relative;
+    }
+    .title-clients h1{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .content-clients::-webkit-scrollbar{
+        display: none;
+    }
+    .content-clients img {
+        margin-right: 50px;
+        animation: moveRight 10s linear infinite;
+        position: relative;
+    }
+    #koperasi{
+        width: 102.87px;
+        height: 46px;
+        object-fit: cover;
+    }
+    #infovesta{
+        height: 46.32px;
+        width: 200px;
+        object-fit: cover;
+    }
+    #ot{
+        width: 85.02;
+        height: 46px;
+        object-fit: cover;
+    }
+    #pan{
+        height: 52px;
+        width: 123.16px;
+        object-fit: cover;
+    }
+    #ssp{
+        width: 81.93px;
+        height: 66px;
+        object-fit: cover;
+    }
+    #lockheed{
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+    }
+    @keyframes moveRight {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 100%;
+        }
+    }
+    
+}

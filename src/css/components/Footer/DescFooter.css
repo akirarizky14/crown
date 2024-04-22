@@ -1,0 +1,80 @@
+.container-descfooter{
+    width: 20%;
+    height: 50%;
+}
+.title-footer{
+    width: 100%;
+    height: 30%;
+}
+.title-footer h3{
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+.desc-footer{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.desc-footer span{
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+}
+@media screen and (max-width:1024px){
+    .container-descfooter{
+        width: 20%;
+        height: 50%;
+    }
+    .title-footer{
+        width: 100%;
+        height: 30%;
+    }
+    .title-footer h3{
+        font-size: 14px;
+        color: white;
+        font-weight: 600;
+    }
+    .desc-footer{
+        width: 90%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    .desc-footer span{
+        font-size: 12px;
+        color: white;
+        font-weight: 300;
+    }
+}
+@media screen and (max-width:768px){
+    .container-descfooter{
+        width: 130px;
+        height: 25%;
+    }
+    .title-footer{
+        width: 100%;
+        height: 30%;
+    }
+    .title-footer h3{
+        font-size: 14px;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+    }
+    .desc-footer{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    .desc-footer span{
+        font-size: 12px;
+        color: white;
+        font-weight: 300;
+        text-align: center;
+    }
+}
