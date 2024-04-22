@@ -1,6 +1,7 @@
 .container-descfooter{
     width: 20%;
     height: 50%;
+    cursor: pointer;
 }
 .title-footer{
     width: 100%;

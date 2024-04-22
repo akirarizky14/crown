@@ -25,7 +25,7 @@ function CardExplore(props) {
                         <img src={Star} alt="Star" />
                         <img src={Star} alt="Star" />
                         <img src={Star} alt="Star" />
-                        <span> 12 Review</span>
+                        <span> {props.Review} Review</span>
                     </div>
                     <div className="spec-bottom-cardExplore">
                         <div className="wrapper-spec-bottom-cardExplore">

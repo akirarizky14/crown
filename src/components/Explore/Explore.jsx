@@ -18,58 +18,64 @@ function Explore() {
             </div>
             <div className="content-explore">
                 <CardExplore 
-                  name="Toyota Innova Zenix"
+                  name="Toyota Innova 2.0 V"
                   CarPict={innova}
                   Transmision="AT"
-                  Spedo="10.000"
+                  Spedo="60.000"
                   Petrol="Gasoline"
                   Calendar="2024"
                   Location="Jakarta Barat"
+                  Review="5"
                 />
                 <CardExplore 
-                  name="Toyota Vellfire"
+                  name="Toyota Alphard G"
                   CarPict={vellfire}
                   Transmision="AT"
                   Spedo="10.000"
                   Petrol="Gasoline"
-                  Calendar="2024"
+                  Calendar="2023"
                   Location="Jakarta Barat"
+                  Review="7"
                 />
                 <CardExplore 
-                  name="BMW"
+                  name="BMW CKD-A7"
                   CarPict={bmw}
                   Transmision="AT"
-                  Spedo="10.000"
+                  Spedo="5.000"
                   Petrol="Gasoline"
-                  Calendar="2024"
+                  Calendar="2023"
                   Location="Jakarta Barat"
+                  Review="8"
                 />
                 <CardExplore 
                   name="Toyota Avanza G"
                   CarPict={avanza}
-                  Transmision="AT"
-                  Spedo="10.000"
+                  Transmision="CVT"
+                  Spedo="30.000"
                   Petrol="Gasoline"
-                  Calendar="2024"
+                  Calendar="2022"
                   Location="Jakarta Barat"
+                  Review="5"
                 />
                 <CardExplore 
                   name="Wuling Binguo"
                   CarPict={binguo}
                   Transmision="AT"
-                  Spedo="10.000"
-                  Petrol="Electric"
+                  Spedo="-"
+                  Petrol="Electric V"
                   Calendar="2024"
                   Location="Jakarta Barat"
+                  Review="1"
                 />
                 <CardExplore 
-                  name="Wuling Dolphin"
+                  name="BYD Dolphin"
                   CarPict={dolphin}
                   Transmision="AT"
-                  Spedo="10.000"
-                  Petrol="Electric"
+                  Spedo="-"
+                  Petrol="Electric V"
                   Calendar="2024"
                   Location="Jakarta Barat"
+                  Review=" 1"
                 />
             </div>
         </div>

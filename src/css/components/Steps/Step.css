@@ -10,7 +10,6 @@
 .number-step{
     width: 10%;
     height: 100%;
-    background-color: rgb(69, 12, 97);
     display: flex;
     justify-content: center;
 }
@@ -60,7 +59,6 @@
     .number-step{
         width: 10%;
         height: 100%;
-        background-color: rgb(69, 12, 97);
         display: flex;
         justify-content: center;
     }
@@ -88,7 +86,6 @@
     .desc-step h3{
         font-size: 10px;
         line-height: 0.9rem;
-        font-weight: 500;
     }
     .desc-step h4{
         font-size: 8px;
@@ -100,7 +97,7 @@
 
 @media screen and (max-width:768px){
     .container-step{
-        width: 40%;
+        width: 200px;
         height: 80%;
     }
     .wrapper-step{
@@ -111,7 +108,6 @@
     .number-step{
         width: 10%;
         height: 100%;
-        background-color: rgb(69, 12, 97);
         display: flex;
         justify-content: center;
     }
@@ -139,7 +135,6 @@
     .desc-step h3{
         font-size: 12px;
         line-height: 0.9rem;
-        font-weight: 500;
     }
     .desc-step h4{
         font-size: 9px;
