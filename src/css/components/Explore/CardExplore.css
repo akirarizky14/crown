@@ -1,7 +1,7 @@
 .container-cardExplore{
     position: relative;
     width: 100%;
-    min-height: 220px;
+    min-height: 240px;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -27,7 +27,7 @@
 }
 .image-cardExplore{
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     bottom: 0;
     width: 48%;
@@ -37,7 +37,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: left center;
+    object-position: right center;
 }
 .info-cardExplore{
     position: relative;
@@ -45,14 +45,22 @@
     width: 100%;
     padding: 1.5rem 1.75rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .category-cardExplore{
-    font-size: 1.6rem;
+    font-family: var(--font-display);
+    font-size: 3rem;
     font-weight: 800;
     color: var(--color-text);
-    line-height: 1.15;
-    text-align: right;
+    line-height: 1.05;
+    text-align: left;
+    max-width: 60%;
+}
+
+@media screen and (max-width:900px){
+    .category-cardExplore{
+        font-size: 2.25rem;
+    }
 }
 
 @media screen and (max-width:640px){
@@ -66,6 +74,7 @@
         padding: 1.1rem 1.25rem;
     }
     .category-cardExplore{
-        font-size: 1.25rem;
+        font-size: 1.6rem;
+        max-width: 65%;
     }
 }

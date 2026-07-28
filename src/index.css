@@ -13,6 +13,7 @@
   --color-text-muted: #6B7280;
   --color-border: #E5E7EB;
   --color-footer-bg: #1F1F1F;
+  --font-display: "Playfair Display", serif;
 
   --max-width: 1200px;
 }
