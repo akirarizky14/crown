@@ -6,10 +6,11 @@ import Delivery from '../../assets/Delivery.png';
 import Hands from '../../assets/Hands.png';
 function Steps() {
   return (
-    <div className='container-steps'>
+    <section id="step-nyewa" className='container-steps'>
         <div className="wrapper-steps">
             <div className="title-steps">
-                <h1>Step Menyewa Mobil di Crown Car</h1>
+                <h1 className="section-title">Step Menyewa Mobil di Crown Car</h1>
+                <span className="section-subtitle">Cuma 4 langkah, mobil siap antar ke lokasimu</span>
             </div>
             <div className="content-steps">
                 <Step 
@@ -37,7 +38,7 @@ function Steps() {
                 />
             </div>
         </div>
-    </div>
+    </section>
   )
 }
 

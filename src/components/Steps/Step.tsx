@@ -10,18 +10,12 @@ interface StepProps {
 function Step(props: StepProps) {
   return (
     <div className="container-step">
-        <div className="wrapper-step">
-            <div className="number-step">
-                <h3>{props.number}</h3>
-            </div>
-            <div className="pict-step">
-                <img src={props.image} alt="Image" />
-            </div>
-            <div className="desc-step">
-                <h3>{props.desc}</h3>
-                <h4>{props.note}</h4>
-            </div>
-        </div>
+      <div className="top-step">
+        <span className="number-step">{props.number}</span>
+        <img src={props.image} alt="" />
+      </div>
+      <h3 className="desc-step">{props.desc}</h3>
+      {props.note && <h4 className="note-step">{props.note}</h4>}
     </div>
   )
 }

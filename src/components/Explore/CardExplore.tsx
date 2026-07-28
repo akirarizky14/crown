@@ -1,63 +1,35 @@
 import '../../css/components/Explore/CardExplore.css'
-import { Button } from '@mui/material'
 import Star from '../../assets/Star.png'
-import Transmision from '../../assets/Vector.png'
-import Spedo from '../../assets/spedo.png'
-import Petrol from '../../assets/petrol.png'
-import Calendar from '../../assets/calendar.png'
-import Location from '../../assets/location.png'
 
 interface CardExploreProps {
   CarPict: string
   name: string
-  Review: string
-  Transmision: string
-  Spedo: string
-  Petrol: string
-  Calendar: string
-  Location: string
+  Rating: string
+  Price: string
+  bgVariant: 'peach' | 'pink' | 'gray'
 }
 
 function CardExplore(props: CardExploreProps) {
   return (
     <div className="container-cardExplore">
-        <div className="wrapper-cardExplore">
-            <div className="top-cardExplore">
-                <div className="image-top-cardExplore">
-                    <img src={props.CarPict} alt="Logo" />
-                </div>
-            </div>
-            <div className="bottom-cardExplore">
-                <div className="desc-bottom-cardExplore">
-                    <div className="title-bottom-cardExplore">
-                        <h1>{props.name}</h1>
-                        <img src={Star} alt="Star" />
-                        <img src={Star} alt="Star" />
-                        <img src={Star} alt="Star" />
-                        <img src={Star} alt="Star" />
-                        <img src={Star} alt="Star" />
-                        <span> {props.Review} Review</span>
-                    </div>
-                    <div className="spec-bottom-cardExplore">
-                        <div className="wrapper-spec-bottom-cardExplore">
-                            <img src={Transmision} alt="Transmisi" />
-                            <span>{props.Transmision}</span>
-                            <img src={Spedo} alt="Spedometer" />
-                            <span>{props.Spedo} KM</span>
-                            <img src={Petrol} alt="Petrol" />
-                            <span>{props.Petrol}</span>
-                            <img src={Calendar} alt="Calendar" />
-                            <span>{props.Calendar}</span>
-                            <img src={Location} alt="Location" />
-                            <span>{props.Location}</span>
-                        </div>
-                    </div>
-                    <div className="button-bottom-cardExplore">
-                        <Button variant="contained">Rent Now</Button>
-                    </div>
-                </div>
-            </div>
+      <div className={`image-cardExplore bg-${props.bgVariant}`}>
+        <img src={props.CarPict} alt={props.name} />
+      </div>
+      <div className="body-cardExplore">
+        <div className="title-row-cardExplore">
+          <h3>{props.name}</h3>
+          <span className="rating-cardExplore">
+            <img src={Star} alt="Rating" />
+            {props.Rating}
+          </span>
         </div>
+        <div className="footer-cardExplore">
+          <span className="price-cardExplore">
+            {props.Price}<small> /hari</small>
+          </span>
+          <button type="button">Sewa</button>
+        </div>
+      </div>
     </div>
   )
 }

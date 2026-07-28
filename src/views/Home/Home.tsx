@@ -1,8 +1,9 @@
 import Carousel from '../../components/Carousel/Carousel'
 import Explore from '../../components/Explore/Explore'
 import Steps from '../../components/Steps/Steps'
+import Testimoni from '../../components/Testimoni/Testimoni'
+import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs'
 import Footer from '../../components/Footer/Footer'
-import Clients from '../../components/Clients/Clients'
 
 function Home() {
   return (
@@ -10,7 +11,8 @@ function Home() {
         <Carousel/>
         <Explore/>
         <Steps/>
-        <Clients/>
+        <Testimoni/>
+        <WhyChooseUs/>
         <Footer/>
     </>
   )
