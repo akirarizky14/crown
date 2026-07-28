@@ -1,4 +1,3 @@
-import React from 'react';
 import Step from './Step';
 import '../../css/components/Steps/Steps.css';
 import Check from '../../assets/Check.png';

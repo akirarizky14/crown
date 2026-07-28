@@ -1,4 +1,3 @@
-import React from 'react'
 import background from '../../assets/Carousel.png'
 import { Button } from '@mui/material'
 import '../../css/components/Home/Carousel/Carousel.css'

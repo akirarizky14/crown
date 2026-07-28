@@ -1,4 +1,3 @@
-import React from 'react'
 import '../../css/components/Explore/Explore.css'
 import CardExplore from './CardExplore'
 import innova from '../../assets/innova.png'

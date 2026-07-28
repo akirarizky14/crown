@@ -1,4 +1,3 @@
-import React from 'react'
 import '../../css/components/Explore/CardExplore.css'
 import { Button } from '@mui/material'
 import Star from '../../assets/Star.png'
@@ -7,7 +6,19 @@ import Spedo from '../../assets/spedo.png'
 import Petrol from '../../assets/petrol.png'
 import Calendar from '../../assets/calendar.png'
 import Location from '../../assets/location.png'
-function CardExplore(props) {
+
+interface CardExploreProps {
+  CarPict: string
+  name: string
+  Review: string
+  Transmision: string
+  Spedo: string
+  Petrol: string
+  Calendar: string
+  Location: string
+}
+
+function CardExplore(props: CardExploreProps) {
   return (
     <div className="container-cardExplore">
         <div className="wrapper-cardExplore">

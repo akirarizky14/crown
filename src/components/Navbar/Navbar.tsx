@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../css/components/Navbar/Navbar.css';
 import Button from '@mui/material/Button';
 import logo from '../../assets/logo_crown_car.png';

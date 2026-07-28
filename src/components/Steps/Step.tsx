@@ -1,6 +1,13 @@
-import React from 'react'
 import '../../css/components/Steps/Step.css'
-function Step(props) {
+
+interface StepProps {
+  number: string
+  image: string
+  desc: string
+  note?: string
+}
+
+function Step(props: StepProps) {
   return (
     <div className="container-step">
         <div className="wrapper-step">

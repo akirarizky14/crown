@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Countdown.css'; // Mengimpor file CSS Countdown
 
+interface TimeLeft {
+  days?: number;
+  hours?: number;
+  minutes?: number;
+  seconds?: number;
+}
+
 function Countdown() {
-  const calculateTimeLeft = () => {
+  const calculateTimeLeft = (): TimeLeft => {
     const difference = +new Date('2024-04-26') - +new Date();
-    let timeLeft = {};
+    let timeLeft: TimeLeft = {};
 
     if (difference > 0) {
       timeLeft = {
@@ -30,7 +37,7 @@ function Countdown() {
 
   return (
     <div className="countdown-container">
-      {Object.keys(timeLeft).map((interval) => (
+      {(Object.keys(timeLeft) as Array<keyof TimeLeft>).map((interval) => (
         <span key={interval} className="countdown-item">
           <span className="countdown-number">{timeLeft[interval]}</span>
           <span className="countdown-label">{interval}</span>
