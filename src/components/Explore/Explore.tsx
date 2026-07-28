@@ -6,10 +6,10 @@ import alphard from '../../assets/alphard.png'
 import bmw from '../../assets/bmw.png'
 
 const CARS = [
-  { name: 'Daihatsu Sigra R', pict: sigra, rating: '4.7', price: 'Rp350rb', bg: 'peach' as const },
-  { name: 'BYD Seal', pict: bydSeal, rating: '4.8', price: 'Rp900rb', bg: 'pink' as const },
-  { name: 'Toyota Alphard', pict: alphard, rating: '4.9', price: 'Rp1,2jt', bg: 'gray' as const },
-  { name: 'BMW 5 Series', pict: bmw, rating: '5.0', price: 'Rp1,5jt', bg: 'peach' as const },
+  { category: 'City Car', name: 'Daihatsu Sigra', pict: sigra, price: 'Rp350rb', bg: 'peach' as const },
+  { category: 'Wedding', name: 'BMW 5 Series', pict: bmw, price: 'Rp1,5jt', bg: 'pink' as const },
+  { category: 'Corporate', name: 'Toyota Alphard', pict: alphard, price: 'Rp1,2jt', bg: 'gray' as const },
+  { category: 'Employee', name: 'BYD Seal', pict: bydSeal, price: 'Rp900rb', bg: 'blue' as const },
 ]
 
 function Explore() {
@@ -17,16 +17,16 @@ function Explore() {
     <section id="mobil-list" className="container-explore">
       <div className="wrapper-explore">
         <div className="title-explore">
-          <h1 className="section-title">Explore Popular Cars</h1>
-          <span className="section-subtitle">Drive in Style with Our Premium Rental Fleet!</span>
+          <h1 className="section-title">Sewa Sesuai Kebutuhanmu</h1>
+          <span className="section-subtitle">Dari jalan-jalan kota sampai acara spesial, kami punya mobilnya</span>
         </div>
         <div className="content-explore">
           {CARS.map((car) => (
             <CardExplore
-              key={car.name}
+              key={car.category}
+              category={car.category}
               name={car.name}
               CarPict={car.pict}
-              Rating={car.rating}
               Price={car.price}
               bgVariant={car.bg}
             />
