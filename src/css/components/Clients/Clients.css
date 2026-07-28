@@ -1,60 +1,91 @@
 .container-clients{
     width: 100%;
+    background-color: var(--color-surface);
     display: flex;
     justify-content: center;
+    padding: 2rem 0 2.5rem;
+}
+.wrapper-clients{
+    width: 90%;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.label-row-clients{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 420px;
+}
+.line-clients{
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-border);
+}
+.label-clients{
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    white-space: nowrap;
 }
 .content-clients {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 50px;
-    filter: grayscale(1) opacity(0.7);
+    column-gap: 48px;
+    row-gap: 1.5rem;
 }
-.content-clients::-webkit-scrollbar{
-    display: none;
+.content-clients img {
+    filter: grayscale(1) opacity(0.55);
+    transition: filter 0.25s ease;
+}
+.content-clients img:hover {
+    filter: grayscale(0) opacity(1);
 }
 #koperasi{
     width: 102.87px;
     height: 46px;
     object-fit: cover;
-    flex-shrink: 0;
 }
 #infovesta{
     height: 46.32px;
     width: 200px;
     object-fit: cover;
-    flex-shrink: 0;
 }
 #ot{
     width: 85px;
     height: 46px;
     object-fit: cover;
-    flex-shrink: 0;
 }
 #pan{
     height: 52px;
     width: 123.16px;
     object-fit: cover;
-    flex-shrink: 0;
 }
 #ssp{
     width: 81.93px;
     height: 66px;
     object-fit: cover;
-    flex-shrink: 0;
 }
 #lockheed{
     width: 56px;
     height: 56px;
     object-fit: cover;
-    flex-shrink: 0;
 }
 
 @media screen and (max-width:768px){
     .content-clients{
-        gap: 32px;
+        column-gap: 28px;
+        row-gap: 1.25rem;
+    }
+    .container-clients{
+        padding: 1.75rem 0 2rem;
     }
 }

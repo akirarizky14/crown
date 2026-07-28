@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import '../../css/components/WhyChooseUs/WhyChooseUs.css'
-import Clients from '../Clients/Clients'
 
 interface Reason {
   title: string
@@ -65,10 +64,6 @@ function WhyChooseUs() {
               <p>{reason.desc}</p>
             </div>
           ))}
-        </div>
-        <div className="trusted-why">
-          <span className="trusted-label-why">Dipercaya oleh</span>
-          <Clients />
         </div>
       </div>
     </section>

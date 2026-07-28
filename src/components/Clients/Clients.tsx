@@ -10,13 +10,20 @@ import '../../css/components/Clients/Clients.css'
 function Clients(){
     return(
         <div className="container-clients">
-            <div className="content-clients">
-                <img id='koperasi' src={logo_koperasi} alt="logo_koperasi" />
-                <img id='infovesta' src={logo_infovesta} alt="logo_infovesta" />
-                <img id='lockheed' src={logo_lockheed} alt="logo_lockheed" />
-                <img id='ot' src={logo_ot} alt="logo_ot" />
-                <img id='pan' src={logo_pan_pacific} alt="logo_pan_pacific" />
-                <img id='ssp' src={logo_ssp} alt="logo_ssp" />
+            <div className="wrapper-clients">
+                <div className="label-row-clients">
+                    <span className="line-clients"></span>
+                    <span className="label-clients">Dipercaya oleh</span>
+                    <span className="line-clients"></span>
+                </div>
+                <div className="content-clients">
+                    <img id='koperasi' src={logo_koperasi} alt="logo_koperasi" />
+                    <img id='infovesta' src={logo_infovesta} alt="logo_infovesta" />
+                    <img id='lockheed' src={logo_lockheed} alt="logo_lockheed" />
+                    <img id='ot' src={logo_ot} alt="logo_ot" />
+                    <img id='pan' src={logo_pan_pacific} alt="logo_pan_pacific" />
+                    <img id='ssp' src={logo_ssp} alt="logo_ssp" />
+                </div>
             </div>
         </div>
     )
