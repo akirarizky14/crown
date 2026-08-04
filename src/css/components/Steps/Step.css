@@ -42,11 +42,52 @@
     color: var(--color-text-muted);
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:1024px){
     .container-step{
-        padding: 1.25rem;
+        padding: 1.1rem;
+        gap: 0.6rem;
+    }
+    .top-step img{
+        width: 32px;
+        height: 32px;
+    }
+    .number-step{
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
     }
     .desc-step{
-        font-size: 0.875rem;
+        font-size: 0.85rem;
+        line-height: 1.3;
+        font-weight: 500;
+    }
+    .note-step{
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width:480px){
+    .container-step{
+        padding: 0.85rem;
+        gap: 0.45rem;
+        border-radius: 12px;
+    }
+    .top-step img{
+        width: 26px;
+        height: 26px;
+    }
+    .number-step{
+        width: 20px;
+        height: 20px;
+        font-size: 0.6rem;
+    }
+    .desc-step{
+        font-size: 0.7rem;
+        line-height: 1.25;
+    }
+    .note-step{
+        font-size: 0.6rem;
+        line-height: 1.15;
     }
 }

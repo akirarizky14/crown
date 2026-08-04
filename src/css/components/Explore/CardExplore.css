@@ -1,6 +1,7 @@
 .container-cardExplore{
     position: relative;
     width: 100%;
+    justify-self: center;
     min-height: 240px;
     border-radius: 20px;
     overflow: hidden;
@@ -30,7 +31,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    width: 48%;
+    width: 42%;
     overflow: hidden;
 }
 .image-cardExplore img{
@@ -39,42 +40,40 @@
     object-fit: contain;
     object-position: right center;
 }
+.container-cardExplore.bg-peach .image-cardExplore{
+    width: 32%;
+}
 .info-cardExplore{
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 1.5rem 1.75rem;
+    padding: 1.5rem 2rem;
+    padding-right: 46%;
     display: flex;
     justify-content: flex-start;
 }
 .category-cardExplore{
-    font-family: var(--font-display);
-    font-size: 3rem;
-    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
     color: var(--color-text);
-    line-height: 1.05;
+    line-height: 1.1;
     text-align: left;
-    max-width: 60%;
+    max-width: 100%;
 }
 
-@media screen and (max-width:900px){
-    .category-cardExplore{
-        font-size: 2.25rem;
-    }
-}
-
-@media screen and (max-width:640px){
+@media screen and (max-width:768px){
     .container-cardExplore{
-        min-height: 190px;
-    }
-    .image-cardExplore{
-        width: 44%;
+        min-height: 150px;
+        border-radius: 14px;
     }
     .info-cardExplore{
-        padding: 1.1rem 1.25rem;
+        padding: 0.75rem 0.85rem;
+        padding-right: 44%;
     }
     .category-cardExplore{
-        font-size: 1.6rem;
-        max-width: 65%;
+        font-size: 1rem;
+        line-height: 1.15;
+        max-width: 100%;
     }
 }

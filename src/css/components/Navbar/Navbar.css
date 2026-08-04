@@ -120,3 +120,27 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 480px){
+    .wrapper-navbar{
+        height: 60px;
+    }
+    .center-navbar{
+        top: 60px;
+    }
+    .left-navbar img{
+        height: 34px;
+    }
+    .center-navbar a{
+        font-size: 0.85rem;
+        padding: 0.75rem 6%;
+    }
+    .burger-navbar{
+        width: 30px;
+        height: 30px;
+        gap: 4px;
+    }
+    .burger-navbar span{
+        width: 18px;
+    }
+}

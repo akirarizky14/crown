@@ -30,8 +30,14 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media screen and (max-width:480px){
+@media screen and (max-width:768px){
+    .container-steps{
+        padding: 1.25rem 0 2.5rem;
+    }
+    .wrapper-steps{
+        gap: 1.5rem;
+    }
     .content-steps{
-        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }

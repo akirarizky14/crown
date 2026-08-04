@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import '../../css/components/Testimoni/Testimoni.css'
 import Star from '../../assets/Star.png'
 
@@ -30,6 +31,38 @@ const TESTIMONIALS: Testimony[] = [
 ]
 
 function Testimoni() {
+  const trackRef = useRef<HTMLDivElement>(null)
+  const indexRef = useRef(0)
+
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track) return
+
+    const mql = window.matchMedia('(max-width: 640px)')
+    let timer: ReturnType<typeof setInterval> | undefined
+
+    const stop = () => {
+      if (timer) clearInterval(timer)
+    }
+    const start = () => {
+      stop()
+      timer = setInterval(() => {
+        const next = (indexRef.current + 1) % TESTIMONIALS.length
+        indexRef.current = next
+        track.scrollTo({ left: next * track.clientWidth, behavior: 'smooth' })
+      }, 4000)
+    }
+    const handleChange = () => (mql.matches ? start() : stop())
+
+    handleChange()
+    mql.addEventListener('change', handleChange)
+
+    return () => {
+      stop()
+      mql.removeEventListener('change', handleChange)
+    }
+  }, [])
+
   return (
     <section id="testimoni" className="container-testimoni">
       <div className="wrapper-testimoni">
@@ -37,7 +70,7 @@ function Testimoni() {
           <h1 className="section-title">Apa Kata Mereka</h1>
           <span className="section-subtitle">Pengalaman pelanggan yang sudah rental bareng Crown Car</span>
         </div>
-        <div className="content-testimoni">
+        <div className="content-testimoni" ref={trackRef}>
           {TESTIMONIALS.map((item) => (
             <div className="card-testimoni" key={item.name}>
               <div className="stars-testimoni">

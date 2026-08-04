@@ -30,3 +30,15 @@
         font-size: 0.8rem;
     }
 }
+@media screen and (max-width:480px){
+    .title-footer h3{
+        font-size: 0.85rem;
+        margin-bottom: 0.6rem;
+    }
+    .desc-footer{
+        gap: 0.3rem;
+    }
+    .desc-footer span{
+        font-size: 0.75rem;
+    }
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/components/Navbar/Navbar.css';
 import logo from '../../assets/crown-logo.svg';
 
@@ -6,7 +7,7 @@ const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'Mobil List', href: '#mobil-list' },
   { label: 'Step Nyewa', href: '#step-nyewa' },
-  { label: 'Blog & FAQ', href: '#' },
+  { label: 'Blog & FAQ', to: '/blog' },
 ];
 
 function Navbar() {
@@ -24,11 +25,17 @@ function Navbar() {
           <img src={logo} alt="Crown Car" />
         </a>
         <nav className={`center-navbar ${isMenuOpen ? 'is-open' : ''}`}>
-          {NAV_LINKS.map((link) => (
-            <a key={link.label} href={link.href} onClick={() => setIsMenuOpen(false)}>
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) =>
+            link.to ? (
+              <Link key={link.label} to={link.to} onClick={() => setIsMenuOpen(false)}>
+                {link.label}
+              </Link>
+            ) : (
+              <a key={link.label} href={link.href} onClick={() => setIsMenuOpen(false)}>
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
         <div className="right-navbar">
           <button type="button" className="cta-navbar" onClick={redirectToEmail}>

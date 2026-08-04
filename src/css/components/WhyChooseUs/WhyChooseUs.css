@@ -25,7 +25,7 @@
     gap: 1.5rem;
 }
 .card-why{
-    background-color: var(--color-surface);
+    background-color: var(--color-primary-light);
     border-radius: 20px;
     padding: 1.75rem;
     display: flex;
@@ -37,7 +37,7 @@
     width: 52px;
     height: 52px;
     border-radius: 14px;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-surface);
     color: var(--color-primary);
     display: flex;
     align-items: center;
@@ -48,25 +48,61 @@
     height: 26px;
 }
 .card-why h3{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--color-text);
 }
 .card-why p{
-    font-size: 0.85rem;
-    line-height: 1.5;
+    font-size: 0.78rem;
+    line-height: 1.45;
     color: var(--color-text-muted);
 }
 @media screen and (max-width:1024px){
     .content-why{
         grid-template-columns: repeat(2, 1fr);
     }
+    .card-why{
+        padding: 1.4rem;
+    }
+    .icon-why{
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+    }
+    .icon-why svg{
+        width: 22px;
+        height: 22px;
+    }
 }
 @media screen and (max-width:480px){
-    .content-why{
-        grid-template-columns: 1fr;
-    }
     .container-why{
         padding: 2.5rem 0;
+    }
+    .wrapper-why{
+        gap: 1.5rem;
+    }
+    .card-why{
+        padding: 1.1rem;
+        gap: 0.5rem;
+        background-color: var(--color-surface);
+        align-items: center;
+        text-align: center;
+    }
+    .icon-why{
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background-color: var(--color-surface);
+    }
+    .icon-why svg{
+        width: 28px;
+        height: 28px;
+    }
+    .card-why h3{
+        font-size: 0.85rem;
+    }
+    .card-why p{
+        font-size: 0.75rem;
+        line-height: 1.4;
     }
 }
