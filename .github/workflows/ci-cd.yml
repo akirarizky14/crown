@@ -28,4 +28,4 @@ jobs:
 
       - name: Deploy to production
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: rsync -av --delete dist/ "${{ vars.DEPLOY_PATH }}/"
+        run: rsync -av --delete dist/ /var/www/crown/dist/
