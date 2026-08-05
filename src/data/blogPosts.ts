@@ -19,14 +19,14 @@ export const CATEGORIES = ['Semua', 'Panduan Sewa', 'Tips Berkendara', 'Perawata
 
 export const ALL_POSTS: Post[] = [
   {
-    slug: 'panduan-lengkap-sewa-mobil-untuk-pemula-di-jakarta',
-    category: 'Panduan Sewa',
-    title: 'Panduan Lengkap Sewa Mobil untuk Pemula di Jakarta',
+    slug: 'tips-nyaman-berkendara-untuk-perjalanan-jarak-jauh',
+    category: 'Tips Berkendara',
+    title: 'Tips Nyaman Berkendara untuk Perjalanan Jarak Jauh',
     content: [
-      'Menyewa mobil untuk pertama kalinya bisa terasa membingungkan, apalagi dengan banyaknya pilihan armada dan penyedia jasa di Jakarta. Padahal, dengan persiapan yang tepat, proses sewa mobil bisa berjalan cepat dan tanpa drama.',
-      'Langkah pertama adalah menentukan kebutuhanmu: apakah untuk keperluan harian, acara khusus seperti pernikahan, atau perjalanan keluarga ke luar kota. Setiap kebutuhan biasanya cocok dengan tipe mobil yang berbeda, mulai dari city car hemat bahan bakar hingga MPV yang lega untuk banyak penumpang.',
-      'Setelah itu, siapkan dokumen seperti KTP dan SIM yang masih berlaku, serta pastikan kamu memahami syarat pembayaran dan kebijakan pembatalan dari penyedia sewa. Jangan ragu bertanya soal asuransi dan apa saja yang termasuk dalam harga sewa.',
-      'Terakhir, pilih penyedia yang terpercaya dengan armada terawat dan proses booking yang transparan. Dengan begitu, kamu bisa menikmati perjalanan tanpa perlu khawatir soal kondisi kendaraan.',
+      'Perjalanan jarak jauh butuh persiapan lebih dari sekadar mengisi bensin. Kondisi tubuh dan mobil yang prima akan membuat perjalanan terasa jauh lebih nyaman dan aman.',
+      'Atur posisi duduk dan kaca spion sebelum berangkat, dan pastikan kamu cukup istirahat malam sebelumnya. Hindari mengemudi lebih dari dua jam tanpa jeda, berhentilah sejenak di rest area untuk meregangkan badan.',
+      'Siapkan juga playlist atau podcast favorit agar tetap fokus dan tidak mudah mengantuk, serta selalu sedia air minum dan camilan ringan di dalam mobil.',
+      'Terakhir, cek rute perjalanan dan kondisi lalu lintas terkini sebelum berangkat agar kamu bisa memperkirakan waktu tempuh dengan lebih akurat.',
     ],
     author: 'Admin Crown Car',
     date: '24 Jul 2026',
@@ -59,14 +59,14 @@ export const ALL_POSTS: Post[] = [
     image: alphard,
   },
   {
-    slug: 'syarat-dan-dokumen-yang-perlu-disiapkan-sebelum-sewa-mobil',
-    category: 'Panduan Sewa',
-    title: 'Syarat dan Dokumen yang Perlu Disiapkan Sebelum Sewa Mobil',
-    excerpt: 'Pastikan proses sewa mobilmu lancar dengan menyiapkan dokumen-dokumen berikut sebelum booking.',
+    slug: 'cara-menjaga-fokus-dan-konsentrasi-saat-menyetir',
+    category: 'Tips Berkendara',
+    title: 'Cara Menjaga Fokus dan Konsentrasi Saat Menyetir',
+    excerpt: 'Kehilangan fokus sedetik saja bisa berakibat fatal, ini cara menjaganya tetap prima.',
     content: [
-      'Pastikan proses sewa mobilmu lancar dengan menyiapkan dokumen-dokumen berikut sebelum booking, sehingga tidak ada kendala di hari keberangkatan.',
-      'Dokumen yang umum dibutuhkan antara lain KTP asli, SIM A yang masih berlaku, dan terkadang kartu keluarga atau bukti domisili untuk verifikasi tambahan. Beberapa penyedia juga meminta uang jaminan yang akan dikembalikan setelah mobil dikembalikan dalam kondisi baik.',
-      'Untuk mempercepat proses, siapkan salinan digital dari dokumen-dokumen tersebut agar bisa langsung dikirimkan melalui WhatsApp saat melakukan booking.',
+      'Kehilangan fokus sedetik saja bisa berakibat fatal di jalan raya, apalagi saat melewati jalur padat atau kondisi cuaca buruk.',
+      'Simpan ponsel di tempat yang tidak mudah dijangkau saat mengemudi, dan gunakan mode hands-free jika harus menerima panggilan penting. Atur suhu kabin senyaman mungkin agar tidak mudah lelah atau mengantuk.',
+      'Jika mulai merasa ngantuk atau sulit berkonsentrasi, segera menepi dan istirahat sejenak. Jangan memaksakan diri, keselamatan selalu lebih penting daripada kecepatan sampai tujuan.',
     ],
     author: 'Dimas Prasetyo',
     date: '15 Jul 2026',

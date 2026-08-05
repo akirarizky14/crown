@@ -1,0 +1,108 @@
+.overlay-bookingmodal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 200;
+}
+.content-bookingmodal{
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--color-surface);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+.close-bookingmodal{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--color-bg);
+    color: var(--color-text-muted);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-bookingmodal:hover{
+    background-color: var(--color-border);
+}
+.content-bookingmodal h2{
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-text);
+}
+.content-bookingmodal > p{
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.35rem;
+    margin-bottom: 1.5rem;
+}
+.content-bookingmodal form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.content-bookingmodal label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+.content-bookingmodal input,
+.content-bookingmodal select{
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+.content-bookingmodal input:focus,
+.content-bookingmodal select:focus{
+    outline: none;
+    border-color: var(--color-primary);
+}
+.submit-bookingmodal{
+    margin-top: 0.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.submit-bookingmodal:hover{
+    background-color: var(--color-primary-dark);
+}
+
+@media screen and (max-width: 480px){
+    .content-bookingmodal{
+        padding: 1.5rem;
+    }
+    .content-bookingmodal h2{
+        font-size: 1.1rem;
+    }
+    .submit-bookingmodal{
+        padding: 0.65rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}

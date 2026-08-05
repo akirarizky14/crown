@@ -1,0 +1,187 @@
+.container-mobildetail{
+    width: 100%;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+}
+.wrapper-mobildetail{
+    width: 90%;
+    max-width: var(--max-width);
+    padding: 2.5rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.back-mobildetail{
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    width: fit-content;
+}
+.back-mobildetail:hover{
+    color: var(--color-primary);
+}
+
+.content-mobildetail{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+.image-mobildetail{
+    position: relative;
+    background-color: var(--color-peach);
+    border-radius: 24px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-mobildetail img{
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+.badge-mobildetail{
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    background-color: rgba(255,255,255,0.9);
+    color: var(--color-primary-dark);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+}
+
+.info-mobildetail{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.name-row-mobildetail{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.name-row-mobildetail h1{
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+.rating-mobildetail{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.rating-mobildetail svg{
+    width: 13px;
+    height: 13px;
+}
+.year-mobildetail{
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.spec-grid-mobildetail{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+.spec-item-mobildetail{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--color-surface);
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.spec-item-mobildetail svg{
+    width: 22px;
+    height: 22px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+.spec-item-mobildetail p{
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+.spec-item-mobildetail span{
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+}
+
+.book-row-mobildetail{
+    display: flex;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+.book-btn-mobildetail{
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.85rem 2.25rem;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.book-btn-mobildetail:hover{
+    background-color: var(--color-primary-dark);
+}
+
+@media screen and (max-width: 900px){
+    .content-mobildetail{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .image-mobildetail{
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .wrapper-mobildetail{
+        padding: 1.5rem 0 3rem;
+        gap: 1rem;
+    }
+    .image-mobildetail{
+        height: 220px;
+        border-radius: 18px;
+    }
+    .name-row-mobildetail h1{
+        font-size: 1.3rem;
+    }
+    .spec-grid-mobildetail{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+    }
+    .spec-item-mobildetail{
+        padding: 0.65rem 0.75rem;
+    }
+    .book-btn-mobildetail{
+        width: 100%;
+        padding: 0.6rem 3rem;
+        font-size: 0.8rem;
+    }
+}

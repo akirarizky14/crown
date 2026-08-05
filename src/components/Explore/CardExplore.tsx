@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../../css/components/Explore/CardExplore.css'
 
 interface CardExploreProps {
@@ -9,14 +10,17 @@ interface CardExploreProps {
 
 function CardExplore(props: CardExploreProps) {
   return (
-    <div className={`container-cardExplore bg-${props.bgVariant}`}>
+    <Link
+      to={`/mobil?kategori=${encodeURIComponent(props.category)}`}
+      className={`container-cardExplore bg-${props.bgVariant}`}
+    >
       <div className="image-cardExplore">
         <img src={props.CarPict} alt={props.name} />
       </div>
       <div className="info-cardExplore">
         <span className="category-cardExplore">{props.category}</span>
       </div>
-    </div>
+    </Link>
   )
 }
 

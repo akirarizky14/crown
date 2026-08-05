@@ -2,43 +2,34 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/components/Navbar/Navbar.css';
 import logo from '../../assets/crown-logo.svg';
+import BookingModal from '../BookingModal/BookingModal';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Mobil List', href: '#mobil-list' },
-  { label: 'Step Nyewa', href: '#step-nyewa' },
+  { label: 'Home', to: '/' },
+  { label: 'Mobil List', to: '/#mobil-list' },
+  { label: 'Step Nyewa', to: '/#step-nyewa' },
   { label: 'Blog & FAQ', to: '/blog' },
 ];
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const redirectToEmail = () => {
-    const email = 'marketing2.crowncar@gmail.com';
-    window.location.href = `mailto:${email}`;
-  };
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
     <div className="container-navbar">
       <div className="wrapper-navbar">
-        <a href="#home" className="left-navbar">
+        <Link to="/" className="left-navbar">
           <img src={logo} alt="Crown Car" />
-        </a>
+        </Link>
         <nav className={`center-navbar ${isMenuOpen ? 'is-open' : ''}`}>
-          {NAV_LINKS.map((link) =>
-            link.to ? (
-              <Link key={link.label} to={link.to} onClick={() => setIsMenuOpen(false)}>
-                {link.label}
-              </Link>
-            ) : (
-              <a key={link.label} href={link.href} onClick={() => setIsMenuOpen(false)}>
-                {link.label}
-              </a>
-            )
-          )}
+          {NAV_LINKS.map((link) => (
+            <Link key={link.label} to={link.to} onClick={() => setIsMenuOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <div className="right-navbar">
-          <button type="button" className="cta-navbar" onClick={redirectToEmail}>
+          <button type="button" className="cta-navbar" onClick={() => setIsBookingOpen(true)}>
             Sewa Sekarang
           </button>
           <button
@@ -53,6 +44,7 @@ function Navbar() {
           </button>
         </div>
       </div>
+      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </div>
   );
 }

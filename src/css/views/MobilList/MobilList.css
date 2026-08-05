@@ -1,0 +1,170 @@
+.container-mobillist{
+    width: 100%;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+}
+.wrapper-mobillist{
+    width: 90%;
+    max-width: var(--max-width);
+    padding: 2.5rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.search-mobillist input{
+    width: 100%;
+    max-width: 420px;
+    padding: 0.85rem 1.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+.search-mobillist input:focus{
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.filter-mobillist{
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+.pill-mobillist{
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+}
+.pill-mobillist:hover{
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+.pill-mobillist.is-active{
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.grid-mobillist{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.empty-mobillist{
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 2rem 0;
+}
+.card-mobillist{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface);
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-mobillist:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+.image-card-mobillist{
+    position: relative;
+    height: 170px;
+    background-color: var(--color-peach);
+}
+.image-card-mobillist img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.badge-mobillist{
+    position: absolute;
+    top: 0.85rem;
+    left: 0.85rem;
+    background-color: rgba(255,255,255,0.9);
+    color: var(--color-primary-dark);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+}
+.info-card-mobillist{
+    padding: 1.1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.info-card-mobillist h3{
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+.year-mobillist{
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+.spec-row-mobillist{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--color-border);
+}
+.spec-row-mobillist span{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+}
+.spec-row-mobillist svg{
+    width: 15px;
+    height: 15px;
+    color: var(--color-primary);
+}
+
+@media screen and (max-width: 1024px){
+    .grid-mobillist{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wrapper-mobillist{
+        padding: 1.75rem 0 3rem;
+        gap: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .image-card-mobillist{
+        height: 130px;
+    }
+    .info-card-mobillist{
+        padding: 0.85rem 0.9rem 1rem;
+    }
+    .info-card-mobillist h3{
+        font-size: 0.82rem;
+    }
+    .spec-row-mobillist span{
+        font-size: 0.65rem;
+    }
+}

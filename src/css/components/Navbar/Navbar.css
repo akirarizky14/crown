@@ -113,9 +113,6 @@
         width: 100%;
         padding: 0.9rem 6%;
     }
-    .cta-navbar{
-        display: none;
-    }
     .burger-navbar{
         display: flex;
     }
@@ -130,6 +127,13 @@
     }
     .left-navbar img{
         height: 34px;
+    }
+    .right-navbar{
+        gap: 0.6rem;
+    }
+    .cta-navbar{
+        padding: 0.5rem 0.9rem;
+        font-size: 0.75rem;
     }
     .center-navbar a{
         font-size: 0.85rem;

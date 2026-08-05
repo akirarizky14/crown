@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../../css/views/Blog/Blog.css'
 import Footer from '../../components/Footer/Footer'
+import crownLogo from '../../assets/crown-logo.svg'
 import { CATEGORIES, GRID_POSTS, HERO_POST, SIDE_POSTS, initials } from '../../data/blogPosts'
 
 function ArrowIcon() {
@@ -22,8 +23,8 @@ function Blog() {
       <section className="container-blog">
         <div className="wrapper-blog">
           <div className="hero-blog">
-            <Link to={`/blog/${HERO_POST.slug}`} className="hero-main-blog">
-              <img src={HERO_POST.image} alt="" />
+            <Link to={`/blog/${HERO_POST.slug}`} className="hero-main-blog hero-main-blog--placeholder">
+              <img src={crownLogo} alt="" />
               <span className="badge-blog">{HERO_POST.category}</span>
               <div className="hero-info-blog">
                 <h1>{HERO_POST.title}</h1>
@@ -35,8 +36,8 @@ function Blog() {
             </Link>
             <div className="hero-side-blog">
               {SIDE_POSTS.map((post) => (
-                <Link to={`/blog/${post.slug}`} className="side-card-blog" key={post.slug}>
-                  <img src={post.image} alt="" />
+                <Link to={`/blog/${post.slug}`} className="side-card-blog side-card-blog--placeholder" key={post.slug}>
+                  <img src={crownLogo} alt="" />
                   <span className="badge-blog">{post.category}</span>
                   <span className="arrow-blog">
                     <ArrowIcon />
@@ -70,8 +71,8 @@ function Blog() {
           <div className="grid-blog">
             {filteredPosts.map((post) => (
               <Link to={`/blog/${post.slug}`} className="card-blog" key={post.slug}>
-                <div className="image-card-blog">
-                  <img src={post.image} alt="" />
+                <div className="image-card-blog image-card-blog--placeholder">
+                  <img src={crownLogo} alt="" />
                   <span className="badge-blog">{post.category}</span>
                   <span className="arrow-blog">
                     <ArrowIcon />
