@@ -3,6 +3,7 @@ import '../../css/components/BookingModal/BookingModal.css'
 import { CARS } from '../../data/cars'
 
 const ADMIN_WHATSAPP = '6281388000900'
+const CRM_API_URL = import.meta.env.VITE_CRM_API_URL || 'http://localhost:4000'
 
 interface BookingModalProps {
   isOpen: boolean
@@ -34,6 +35,15 @@ function BookingModal({ isOpen, onClose, defaultCar }: BookingModalProps) {
     ].join('\n')
 
     window.open(`https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(message)}`, '_blank')
+
+    // Best-effort: log the lead into the CRM too. Don't block the WhatsApp
+    // flow above if the CRM is unreachable.
+    fetch(`${CRM_API_URL}/api/public/leads`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ customer: nama, phone: whatsapp, vehicle: mobil, source: 'crowncar.id' }),
+    }).catch(() => {})
+
     setNama('')
     setWhatsapp('')
     onClose()
