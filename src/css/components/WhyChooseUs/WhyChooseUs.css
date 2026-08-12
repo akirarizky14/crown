@@ -25,7 +25,7 @@
     gap: 1.5rem;
 }
 .card-why{
-    background-color: var(--color-primary-light);
+    background-color: var(--color-surface);
     border-radius: 20px;
     padding: 1.75rem;
     display: flex;
