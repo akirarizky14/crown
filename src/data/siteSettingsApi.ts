@@ -11,6 +11,13 @@ export interface SiteSettings {
   contactAddress: string
   contactHours: string
   heroImage?: string
+  navbarLogo?: string
+  navbarCtaLabel?: string
+  footerTagline?: string
+  footerSecondaryWhatsapp?: string
+  footerInstagram?: string
+  footerMapsUrl?: string
+  footerCopyright?: string
 }
 
 export async function fetchSiteSettings(): Promise<SiteSettings> {
