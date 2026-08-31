@@ -5,8 +5,12 @@ import sigra from '../../assets/sigra.png'
 import bydSeal from '../../assets/byd_seal.png'
 import alphard from '../../assets/alphard.png'
 import bmw from '../../assets/bmw.png'
+import { fetchSiteSettings, type SiteSettings } from '../../data/siteSettingsApi'
+import { isCmsEditMode, notifyCmsPatch } from '../../lib/cmsEditMode'
 
-const CARS = [
+type ExploreCard = { category: string; name: string; imageUrl: string }
+
+const DEFAULT_CARS = [
   { category: 'City Car', name: 'Daihatsu Sigra', pict: sigra, bg: 'peach' as const },
   { category: 'Wedding', name: 'BMW 5 Series', pict: bmw, bg: 'pink' as const },
   { category: 'Corporate', name: 'Toyota Alphard', pict: alphard, bg: 'gray' as const },
@@ -16,6 +20,12 @@ const CARS = [
 function Explore() {
   const titleRef = useRef<HTMLHeadingElement>(null)
   const [titleWidth, setTitleWidth] = useState<number>()
+  const [settings, setSettings] = useState<Partial<SiteSettings>>({})
+  const editMode = isCmsEditMode()
+
+  useEffect(() => {
+    fetchSiteSettings().then(setSettings).catch(() => {})
+  }, [])
 
   useEffect(() => {
     const titleEl = titleRef.current
@@ -29,6 +39,23 @@ function Explore() {
     return () => observer.disconnect()
   }, [])
 
+  const cards: (ExploreCard & { bg: (typeof DEFAULT_CARS)[number]['bg'] })[] = DEFAULT_CARS.map((car) => {
+    const override = settings.exploreCards?.find((c) => c.category === car.category)
+    return {
+      category: car.category,
+      name: override?.name || car.name,
+      imageUrl: override?.imageUrl || car.pict,
+      bg: car.bg,
+    }
+  })
+
+  function patchCard(category: string, patch: Partial<ExploreCard>) {
+    const base: ExploreCard[] = settings.exploreCards ?? DEFAULT_CARS.map((c) => ({ category: c.category, name: c.name, imageUrl: '' }))
+    const next = base.map((c) => (c.category === category ? { ...c, ...patch } : c))
+    setSettings((s) => ({ ...s, exploreCards: next }))
+    notifyCmsPatch({ exploreCards: next })
+  }
+
   return (
     <section id="mobil-list" className="container-explore">
       <div className="wrapper-explore">
@@ -37,13 +64,16 @@ function Explore() {
           <span className="section-subtitle">Dari jalan-jalan kota sampai acara spesial, kami punya mobilnya</span>
         </div>
         <div className="content-explore" style={titleWidth ? { width: titleWidth } : undefined}>
-          {CARS.map((car) => (
+          {cards.map((card) => (
             <CardExplore
-              key={car.category}
-              category={car.category}
-              name={car.name}
-              CarPict={car.pict}
-              bgVariant={car.bg}
+              key={card.category}
+              category={card.category}
+              name={card.name}
+              CarPict={card.imageUrl}
+              bgVariant={card.bg}
+              editMode={editMode}
+              onNameChange={(v) => patchCard(card.category, { name: v })}
+              onImageUploaded={(url) => patchCard(card.category, { imageUrl: url })}
             />
           ))}
         </div>

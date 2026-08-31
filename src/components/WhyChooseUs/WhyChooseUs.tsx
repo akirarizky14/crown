@@ -1,5 +1,8 @@
-import type { ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import '../../css/components/WhyChooseUs/WhyChooseUs.css'
+import { fetchSiteSettings, type SiteSettings } from '../../data/siteSettingsApi'
+import { isCmsEditMode, notifyCmsPatch } from '../../lib/cmsEditMode'
+import EditableText from '../cms/EditableText'
 
 interface Reason {
   title: string
@@ -7,7 +10,9 @@ interface Reason {
   icon: ReactNode
 }
 
-const REASONS: Reason[] = [
+type WhyCard = { title: string; desc: string }
+
+const DEFAULT_REASONS: Reason[] = [
   {
     title: 'Harga Transparan',
     desc: 'Tanpa biaya tersembunyi, harga yang tertera sudah termasuk semua yang Anda butuhkan.',
@@ -49,6 +54,29 @@ const REASONS: Reason[] = [
 ]
 
 function WhyChooseUs() {
+  const [settings, setSettings] = useState<Partial<SiteSettings>>({})
+  const editMode = isCmsEditMode()
+
+  useEffect(() => {
+    fetchSiteSettings().then(setSettings).catch(() => {})
+  }, [])
+
+  const reasons = DEFAULT_REASONS.map((reason, i) => {
+    const override = settings.whyUsCards?.[i]
+    return {
+      icon: reason.icon,
+      title: override?.title || reason.title,
+      desc: override?.desc || reason.desc,
+    }
+  })
+
+  function patchCard(index: number, patch: Partial<WhyCard>) {
+    const base: WhyCard[] = settings.whyUsCards ?? DEFAULT_REASONS.map((r) => ({ title: r.title, desc: r.desc }))
+    const next = base.map((c, i) => (i === index ? { ...c, ...patch } : c))
+    setSettings((s) => ({ ...s, whyUsCards: next }))
+    notifyCmsPatch({ whyUsCards: next })
+  }
+
   return (
     <section id="kenapa-crown-car" className="container-why">
       <div className="wrapper-why">
@@ -57,11 +85,23 @@ function WhyChooseUs() {
           <span className="section-subtitle">Alasan pelanggan terus balik lagi ke kami</span>
         </div>
         <div className="content-why">
-          {REASONS.map((reason) => (
-            <div className="card-why" key={reason.title}>
+          {reasons.map((reason, i) => (
+            <div className="card-why" key={i}>
               <span className="icon-why">{reason.icon}</span>
-              <h3>{reason.title}</h3>
-              <p>{reason.desc}</p>
+              <h3>
+                {editMode ? (
+                  <EditableText value={reason.title} editMode onChange={(v) => patchCard(i, { title: v })} />
+                ) : (
+                  reason.title
+                )}
+              </h3>
+              <p>
+                {editMode ? (
+                  <EditableText value={reason.desc} editMode multiline onChange={(v) => patchCard(i, { desc: v })} />
+                ) : (
+                  reason.desc
+                )}
+              </p>
             </div>
           ))}
         </div>

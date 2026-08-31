@@ -43,6 +43,9 @@
     row-gap: 1.5rem;
 }
 .content-clients img {
+    max-height: 46px;
+    width: auto;
+    object-fit: contain;
     filter: grayscale(1) opacity(0.55);
     transition: filter 0.25s ease;
 }
@@ -78,6 +81,15 @@
     width: 56px;
     height: 56px;
     object-fit: cover;
+}
+
+.cms-logo-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding-top: 30px;
 }
 
 @media screen and (max-width:768px){

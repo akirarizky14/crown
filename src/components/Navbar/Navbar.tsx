@@ -4,7 +4,9 @@ import '../../css/components/Navbar/Navbar.css';
 import logo from '../../assets/crown-logo.svg';
 import BookingModal from '../BookingModal/BookingModal';
 import { fetchSiteSettings } from '../../data/siteSettingsApi';
-import { isCmsEditMode, notifyCmsEdit } from '../../lib/cmsEditMode';
+import { isCmsEditMode, notifyCmsPatch } from '../../lib/cmsEditMode';
+import EditableText from '../cms/EditableText';
+import EditableImage from '../cms/EditableImage';
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
@@ -32,21 +34,18 @@ function Navbar() {
   }, []);
 
   return (
-    <div
-      className={`container-navbar ${editMode ? 'cms-editable' : ''}`}
-      onClickCapture={
-        editMode
-          ? (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              notifyCmsEdit('navbar');
-            }
-          : undefined
-      }
-    >
+    <div className="container-navbar">
       <div className="wrapper-navbar">
         <Link to="/" className="left-navbar">
-          <img src={navLogo} alt="Crown Car" />
+          <EditableImage
+            src={navLogo}
+            alt="Crown Car"
+            editMode={editMode}
+            onUploaded={(url) => {
+              setNavLogo(url);
+              notifyCmsPatch({ navbarLogo: url });
+            }}
+          />
         </Link>
         <nav className={`center-navbar ${isMenuOpen ? 'is-open' : ''}`}>
           {NAV_LINKS.map((link) => (
@@ -56,9 +55,22 @@ function Navbar() {
           ))}
         </nav>
         <div className="right-navbar">
-          <button type="button" className="cta-navbar" onClick={() => setIsBookingOpen(true)}>
-            {ctaLabel}
-          </button>
+          {editMode ? (
+            <span className="cta-navbar">
+              <EditableText
+                value={ctaLabel}
+                editMode={editMode}
+                onChange={(v) => {
+                  setCtaLabel(v);
+                  notifyCmsPatch({ navbarCtaLabel: v });
+                }}
+              />
+            </span>
+          ) : (
+            <button type="button" className="cta-navbar" onClick={() => setIsBookingOpen(true)}>
+              {ctaLabel}
+            </button>
+          )}
           <button
             type="button"
             className={`burger-navbar ${isMenuOpen ? 'is-open' : ''}`}

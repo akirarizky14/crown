@@ -65,15 +65,3 @@ body {
     font-size: 0.75rem;
   }
 }
-
-.cms-editable {
-  position: relative;
-  cursor: pointer;
-  transition: outline-color 0.15s ease, background-color 0.15s ease;
-  outline: 2px dashed transparent;
-  outline-offset: -2px;
-}
-.cms-editable:hover {
-  outline-color: var(--color-primary);
-  background-color: rgba(242, 112, 30, 0.06);
-}

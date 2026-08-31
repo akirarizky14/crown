@@ -1,0 +1,136 @@
+.cms-edit-text {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  line-height: inherit;
+  resize: none;
+  overflow: hidden;
+  padding: 2px 4px;
+  margin: -2px -4px;
+  border-radius: 4px;
+  outline: 1px dashed transparent;
+  outline-offset: 2px;
+  transition: outline-color 0.15s ease, background-color 0.15s ease;
+}
+.cms-edit-text:hover,
+.cms-edit-text:focus {
+  outline-color: var(--color-primary, #f2701e);
+  background-color: rgba(242, 112, 30, 0.06);
+}
+
+.cms-edit-image-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.cms-edit-image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(31, 31, 31, 0.55);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: inherit;
+  transition: opacity 0.15s ease;
+}
+.cms-edit-image-wrap:hover .cms-edit-image-overlay,
+.cms-edit-image-overlay.uploading {
+  opacity: 1;
+}
+.cms-edit-image-overlay-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.cms-edit-image-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cms-list-controls {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  gap: 4px;
+  z-index: 2;
+}
+.cms-list-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+.cms-list-controls button:hover:not(:disabled) {
+  border-color: var(--color-primary, #f2701e);
+  color: var(--color-primary, #f2701e);
+}
+.cms-list-controls button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.cms-list-controls .cms-remove-btn:hover:not(:disabled) {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.cms-edit-caption {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.7rem;
+  text-align: center;
+  width: 110px;
+}
+
+.cms-add-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1.5px dashed var(--color-border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  min-height: 56px;
+}
+.cms-add-item-btn:hover {
+  border-color: var(--color-primary, #f2701e);
+  color: var(--color-primary, #f2701e);
+}
+.cms-add-item-btn.cms-add-logo {
+  width: 110px;
+  min-height: 46px;
+  padding: 6px;
+  font-size: 0.7rem;
+}
+.cms-add-item-btn.cms-add-testimoni {
+  min-height: 160px;
+  border-radius: 20px;
+}
