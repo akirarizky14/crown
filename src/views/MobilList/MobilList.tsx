@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import '../../css/views/MobilList/MobilList.css'
 import Footer from '../../components/Footer/Footer'
-import { CARS, CATEGORIES } from '../../data/cars'
+import { CATEGORIES, type Car } from '../../data/cars'
+import { fetchCars } from '../../data/carApi'
 
 function FuelIcon() {
   return (
@@ -24,6 +25,13 @@ function SeatIcon() {
 function MobilList() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [search, setSearch] = useState('')
+  const [cars, setCars] = useState<Car[]>([])
+
+  useEffect(() => {
+    fetchCars()
+      .then(setCars)
+      .catch(() => setCars([]))
+  }, [])
 
   const activeCategory = searchParams.get('kategori') || 'Semua'
 
@@ -37,12 +45,12 @@ function MobilList() {
   }
 
   const filteredCars = useMemo(() => {
-    return CARS.filter((car) => {
+    return cars.filter((car) => {
       const matchCategory = activeCategory === 'Semua' || car.category === activeCategory
       const matchSearch = car.name.toLowerCase().includes(search.toLowerCase())
       return matchCategory && matchSearch
     })
-  }, [activeCategory, search])
+  }, [cars, activeCategory, search])
 
   return (
     <>

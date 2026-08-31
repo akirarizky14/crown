@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import '../../css/views/MobilDetail/MobilDetail.css'
 import Footer from '../../components/Footer/Footer'
 import BookingModal from '../../components/BookingModal/BookingModal'
-import { getCarBySlug } from '../../data/cars'
+import type { Car } from '../../data/cars'
+import { fetchCarBySlug } from '../../data/carApi'
 
 function FuelIcon() {
   return (
@@ -50,11 +51,28 @@ function StarIcon() {
 
 function MobilDetail() {
   const { slug } = useParams()
-  const car = slug ? getCarBySlug(slug) : undefined
   const [isBookingOpen, setIsBookingOpen] = useState(false)
+  const [car, setCar] = useState<Car | undefined>(undefined)
+  const [notFound, setNotFound] = useState(false)
+
+  useEffect(() => {
+    if (!slug) return
+    setCar(undefined)
+    setNotFound(false)
+    fetchCarBySlug(slug)
+      .then((result) => {
+        if (result) setCar(result)
+        else setNotFound(true)
+      })
+      .catch(() => setNotFound(true))
+  }, [slug])
+
+  if (notFound) {
+    return <Navigate to="/mobil" replace />
+  }
 
   if (!car) {
-    return <Navigate to="/mobil" replace />
+    return null
   }
 
   return (

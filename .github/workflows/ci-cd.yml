@@ -26,7 +26,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_CRM_API_URL: https://api.crm.crowncar.id
+          VITE_CRM_API_URL: https://api.crowncar.id
 
       - name: Deploy to production
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

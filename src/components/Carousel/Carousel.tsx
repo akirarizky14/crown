@@ -1,7 +1,19 @@
+import { useEffect, useState } from 'react'
 import '../../css/components/Home/Carousel/Carousel.css'
 import Car from '../../assets/Car.webp'
+import { fetchSiteSettings } from '../../data/siteSettingsApi'
 
 function Carousel() {
+  const [heroImage, setHeroImage] = useState<string>(Car)
+
+  useEffect(() => {
+    fetchSiteSettings()
+      .then((settings) => {
+        if (settings.heroImage) setHeroImage(settings.heroImage)
+      })
+      .catch(() => {})
+  }, [])
+
   return (
     <section id="home" className="container-carousel">
       <div className="wrapper-carousel">
@@ -26,7 +38,7 @@ function Carousel() {
         <div className="right-carousel">
           <div className="shape-carousel shape-carousel--peach"></div>
           <div className="shape-carousel shape-carousel--light"></div>
-          <img src={Car} alt="Mobil Crown Car Rental" />
+          <img src={heroImage} alt="Mobil Crown Car Rental" />
         </div>
       </div>
     </section>
