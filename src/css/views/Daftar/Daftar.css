@@ -1,0 +1,11 @@
+.container-daftar{
+    width: 100%;
+    min-width: 320px;
+    min-height: calc(100vh - 72px);
+    min-height: calc(100dvh - 72px);
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+}

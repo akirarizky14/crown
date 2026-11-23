@@ -4,6 +4,7 @@ import Blog from './views/Blog/Blog'
 import BlogDetail from './views/BlogDetail/BlogDetail'
 import MobilList from './views/MobilList/MobilList'
 import MobilDetail from './views/MobilDetail/MobilDetail'
+import Daftar from './views/Daftar/Daftar'
 import Navbar from './components/Navbar/Navbar'
 import ScrollToHash from './components/ScrollToHash'
 import './App.css'
@@ -19,6 +20,7 @@ function App() {
           <Route path='/blog/:slug' element={<BlogDetail/>}/>
           <Route path='/mobil' element={<MobilList/>}/>
           <Route path='/mobil/:slug' element={<MobilDetail/>}/>
+          <Route path='/daftar' element={<Daftar/>}/>
         </Routes>
       </BrowserRouter>
     </>
