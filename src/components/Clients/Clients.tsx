@@ -14,16 +14,31 @@ import EditableImage from '../cms/EditableImage'
 import ListControls from '../cms/ListControls'
 import AddItemButton from '../cms/AddItemButton'
 
+// imageUrl '' means "use the bundled default image for this id" — same convention as Explore
+// and Steps, and what the CMS stores, so saved settings never point at hashed build assets.
 type Logo = { id: string; imageUrl: string; alt: string }
 
+const DEFAULT_IMAGES: Record<string, string> = {
+    koperasi: logo_koperasi,
+    infovesta: logo_infovesta,
+    lockheed: logo_lockheed,
+    ot: logo_ot,
+    pan: logo_pan_pacific,
+    ssp: logo_ssp,
+}
+
 const DEFAULT_LOGOS: Logo[] = [
-    { id: 'koperasi', imageUrl: logo_koperasi, alt: 'logo_koperasi' },
-    { id: 'infovesta', imageUrl: logo_infovesta, alt: 'logo_infovesta' },
-    { id: 'lockheed', imageUrl: logo_lockheed, alt: 'logo_lockheed' },
-    { id: 'ot', imageUrl: logo_ot, alt: 'logo_ot' },
-    { id: 'pan', imageUrl: logo_pan_pacific, alt: 'logo_pan_pacific' },
-    { id: 'ssp', imageUrl: logo_ssp, alt: 'logo_ssp' },
+    { id: 'koperasi', imageUrl: '', alt: 'logo_koperasi' },
+    { id: 'infovesta', imageUrl: '', alt: 'logo_infovesta' },
+    { id: 'lockheed', imageUrl: '', alt: 'logo_lockheed' },
+    { id: 'ot', imageUrl: '', alt: 'logo_ot' },
+    { id: 'pan', imageUrl: '', alt: 'logo_pan_pacific' },
+    { id: 'ssp', imageUrl: '', alt: 'logo_ssp' },
 ]
+
+function logoSrc(logo: Logo): string {
+    return logo.imageUrl || DEFAULT_IMAGES[logo.id] || ''
+}
 
 function Clients(){
     const [logos, setLogos] = useState<Logo[]>(DEFAULT_LOGOS)
@@ -49,10 +64,10 @@ function Clients(){
                     <span className="line-clients"></span>
                 </div>
                 <div className="content-clients">
-                    {logos.map((item, i) => (
+                    {logos.map((item, i) => (editMode || logoSrc(item)) && (
                         <span key={item.id} className={editMode ? 'cms-logo-item' : undefined}>
                             <EditableImage
-                                src={item.imageUrl}
+                                src={logoSrc(item)}
                                 alt={item.alt}
                                 editMode={editMode}
                                 onUploaded={(url) => {
