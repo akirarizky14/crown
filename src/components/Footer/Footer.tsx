@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../../css/components/Footer/Footer.css'
 import DescFooter from './DescFooter'
-import logo from '../../assets/crown-logo.svg'
+import logo from '../../assets/crown-logo.png'
 import { fetchSiteSettings, type SiteSettings } from '../../data/siteSettingsApi'
 import { isCmsEditMode, notifyCmsPatch } from '../../lib/cmsEditMode'
 import EditableText from '../cms/EditableText'

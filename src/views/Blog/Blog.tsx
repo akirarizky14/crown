@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../../css/views/Blog/Blog.css'
 import Footer from '../../components/Footer/Footer'
-import crownLogo from '../../assets/crown-logo.svg'
+import crownLogo from '../../assets/crown-logo.png'
 import { CATEGORIES, GRID_POSTS, HERO_POST, SIDE_POSTS, initials } from '../../data/blogPosts'
 
 function ArrowIcon() {

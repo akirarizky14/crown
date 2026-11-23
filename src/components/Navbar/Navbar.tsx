@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/components/Navbar/Navbar.css';
-import logo from '../../assets/crown-logo.svg';
+import logo from '../../assets/crown-logo.png';
 import BookingModal from '../BookingModal/BookingModal';
 import { fetchSiteSettings } from '../../data/siteSettingsApi';
 import { isCmsEditMode, notifyCmsPatch } from '../../lib/cmsEditMode';
