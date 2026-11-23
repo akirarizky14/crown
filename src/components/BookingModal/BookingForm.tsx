@@ -14,6 +14,7 @@ interface BookingFormProps {
 function BookingForm({ defaultCar, onClose }: BookingFormProps) {
   const [nama, setNama] = useState('')
   const [whatsapp, setWhatsapp] = useState('')
+  const [email, setEmail] = useState('')
   const [tahuMobil, setTahuMobil] = useState(true)
   const [mobil, setMobil] = useState(defaultCar || '')
   const [kategori, setKategori] = useState('')
@@ -29,12 +30,13 @@ function BookingForm({ defaultCar, onClose }: BookingFormProps) {
       const res = await fetch(`${CRM_API_URL}/api/public/leads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ customer: nama, phone: whatsapp, vehicle: kebutuhan, source: 'crowncar.id' }),
+        body: JSON.stringify({ customer: nama, phone: whatsapp, email, vehicle: kebutuhan, source: 'crowncar.id' }),
       })
       if (!res.ok) throw new Error('request failed')
       setStatus('success')
       setNama('')
       setWhatsapp('')
+      setEmail('')
     } catch {
       setStatus('error')
     }
@@ -78,16 +80,27 @@ function BookingForm({ defaultCar, onClose }: BookingFormProps) {
                 required
               />
             </label>
-            <label>
-              No. WhatsApp
-              <input
-                type="tel"
-                value={whatsapp}
-                onChange={(e) => setWhatsapp(e.target.value)}
-                placeholder="08xxxxxxxxxx"
-                required
-              />
-            </label>
+            <div className="row-bookingmodal">
+              <label>
+                No. WhatsApp
+                <input
+                  type="tel"
+                  value={whatsapp}
+                  onChange={(e) => setWhatsapp(e.target.value)}
+                  placeholder="08xxxxxxxxxx"
+                  required
+                />
+              </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="nama@email.com"
+                />
+              </label>
+            </div>
             <div className="radio-group-bookingmodal">
               <span>Sudah tahu mobil yang diinginkan?</span>
               <div className="radio-options-bookingmodal">
