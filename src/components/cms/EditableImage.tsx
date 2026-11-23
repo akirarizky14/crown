@@ -23,7 +23,7 @@ function EditableImage({ src, alt, editMode, onUploaded, className, wrapperClass
     setUploading(true)
     requestCmsUpload(file)
       .then(onUploaded)
-      .catch(() => {})
+      .catch((err: Error) => window.alert(`Gagal mengunggah gambar: ${err.message}`))
       .finally(() => {
         setUploading(false)
         if (inputRef.current) inputRef.current.value = ''
@@ -49,6 +49,9 @@ function EditableImage({ src, alt, editMode, onUploaded, className, wrapperClass
         type="file"
         accept="image/png,image/jpeg,image/webp,image/svg+xml"
         className="cms-edit-image-input"
+        // The click from inputRef.click() bubbles; inside a <Link> (e.g. the navbar logo) the
+        // router would cancel it — no file picker opens and the page navigates away from ?cms=1.
+        onClick={(e) => e.stopPropagation()}
         onChange={(e) => handleFile(e.target.files?.[0])}
       />
     </span>
